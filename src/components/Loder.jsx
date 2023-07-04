@@ -6,10 +6,12 @@ const Loder = () => {
 
      const stickerWrapRef = useRef(null);
      const bgFillRef = useRef(null);
+     const loaderRef = useRef(null);
 
      const dropStickers = () => {
           const stickers = stickerWrapRef.current.querySelectorAll(`.${classes.sticker}`);
           const bgFill = bgFillRef.current;
+          const loader = loaderRef.current;
 
           setTimeout(() => {
           stickers.forEach((sticker) => {
@@ -26,30 +28,34 @@ const Loder = () => {
           setTimeout(() => {
                bgFill.style.transition = 'opacity 0.5s';
                bgFill.style.opacity = 0;
-     
+               
                setTimeout(() => {
                bgFill.style.display = 'none';
+               loader.style.display = 'none';
                }, 500); // 페이드 아웃이 완료되기 위한 대기 시간
           }, 1500); // 스티커가 떨어진 후 대기 시간
           }, 500); // 0.5초 대기
-     
+          
           return () => {
                stickers.forEach((sticker) => {
                     sticker.style.opacity = '0';
                     sticker.classList.remove(classes.on);
+                    
                });
           };
+          
      };
 
      useEffect(() => {
           const cleanup = dropStickers();
           return () => {
           clearTimeout(cleanup);
+          
           };
      }, []);
 
      return (
-          <div className={`${classes.loader}`}>
+          <div className={`${classes.loader}`} ref={loaderRef}>
                <div className={classes.bgfill} ref={bgFillRef}></div>
                <div className={classes.stickerWrap} ref={stickerWrapRef}>
                     <div className={`${classes.sticker} ${classes.part} ${classes.num01} `} data-type="1" data-num="1" data-order="17"><img src="/img/loader01.png" alt='img'/></div>
