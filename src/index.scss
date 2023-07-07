@@ -8,9 +8,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #212121;
 }
+#root{overflow: hidden;}
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: 'KBO-Dia-Gothic_bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,7 +73,11 @@ a{text-decoration: none;color:#000;}
 header{
     box-shadow: inset 0 15px 8px rgba(0, 0, 0, 0.2);
     padding:20px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     h1{
       width: 170px;
       float: left;
@@ -91,6 +103,7 @@ header{
           top: 0;
         }
         &::before{
+          width: 40px;
           background: #fff;
           transform: rotate(-225deg);
           top: 0;
@@ -127,7 +140,7 @@ header{
         position: absolute;
         top:12px;
         left: 0;
-        width: 40px;
+        width: 25px;
         height: 5px;
         transition: 0.4s;
         background: #fff;
@@ -290,7 +303,6 @@ header{
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-top: -40px;
   background: url('https://calm-kelpie-91663e.netlify.app/img/bg01.webp')no-repeat bottom;
   background-size: 100%;
 }
@@ -586,7 +598,20 @@ header{
   right: 16%;
   z-index: 2;
   transform: scaleX(-1);
+  &.two{
+    position: absolute;
+      top: 11%;
+      right: 8%;
+      z-index: 2;
+      transform: scaleX(1);
+      opacity: 0.95;
+      filter: grayscale(12) blur(0.5px);
+      img{
+        width: 850px;
+      }
+  }
 }//아그리파 사진
+
 
 .boxLine{
   position: absolute;
@@ -632,84 +657,6 @@ header{
 }
 
 
-// 비주얼 끝
-
-
-
-
-.tape_img{
-  position: absolute;
-
-
-  &.left{
-    left:-50px;
-    bottom:0;
-    transform: rotate(35deg);
-  }
-  &.right{
-    right:-50px;
-    top:0;
-    transform: rotate(35deg);
-  }
-}
-
-
-
-
-///메인 색션시작//어바웃
-
-
-.MainSection1{
-  background: url('../public/img/bg01B.webp') no-repeat bottom #ffc300;
-  background-size: 100%;
-  height: 100vh;
-
-  .glitch {
-    color: #111;
-    position: relative;
-    font-size: 430px;
-    letter-spacing: -10px;
-    font-family: 'Anton';
-    animation: glitch 3s 2s infinite, shake 2s infinite;
-  }
-  
-  .glitch::before,
-  .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    background: #ffc300;
-    overflow: hidden;
-    top: 0;
-  }
-  
-  .glitch::before {
-    text-shadow: -5px 0 magenta;
-    animation: noise-1 3s linear infinite alternate-reverse, glitch 1.5s 2.1s infinite;
-  }
-  
-  .glitch::after {
-    text-shadow: -5px 0 lightgreen;
-    animation: noise-2 2.5s linear infinite alternate-reverse, glitch 1.5s 2s infinite;
-  }
-}
-
-
-
-
-///메인 색션시작 끝
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 $pale-white: #f6f6f6;
@@ -744,115 +691,702 @@ $pale-white: #f6f6f6;
 }
 
 
-.three{
-  position: absolute;
-  z-index: 10;
-  top: 81%;
-  left: 34%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 100px;
-  background-size: cover;
+  .threee{
+    position: absolute;
+    z-index: 10;
+    top: 81%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    background-size: cover;
 
-  @include cover();
-    #button{
-        width: 122px;
-        padding: 16px;
-        height: 50px;
+      @include cover();
+        #button{
+            width: 122px;
+            padding: 16px;
+            height: 50px;
 
-        position:absolute;
-        @include center();
-        background: transparent;
-        @include anime(0.6s, (cubic-bezier(.55,0,.1,1)));
-        cursor: pointer;
-        box-shadow: 0px 0px 0px #fff;
-        z-index: 0;
-        span{
-          color: $pale-white;
-          font-family:"Anton";
-          font-size: 22px;
-          color:#ffc300;
-          transition: 0.6s;
-          position: absolute;
-          top: 15px;
-          left: 5px;
-        }
-        .ring{
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            @include round(50px);
-            top: 40%;
-            left: 45%;
-            @include anime(1.5s,(cubic-bezier(.55,0,.1,1)));
-            transform:perspective(500px)  translate3d(0px, 0px,0px);
-            opacity: 0.0;
-        }
-        
-        &:hover .one{
-            transform:perspective(500px)  translate3d(-90px, -50px,150px);
-            opacity: 1;
-        }
-          &:hover .two{
-            transform:perspective(800px)  translate3d(-130px, 50px,180px);
-            opacity: 0.6;
-        }
-          &:hover .three{
-            transform:perspective(800px)  translate3d(130px, 50px,30px);
-            opacity: 0.2;
-        }
-        &:hover .four{
-            transform:perspective(800px)  translate3d(130px, -120px,80px);
-            opacity: 0.9;
-        }
-        &::after{
-          position: absolute;
-            top: -35px;
-            left:0;
-          width: 150px;
-          height: 150px;
-            content: "";
-            background: #fff;
-            z-index: -1;
-            transform:perspective(800px) scale(0.0) rotate(0deg);
-            @include anime(1.5s,(cubic-bezier(.55,0,.1,1)));
-        }
-        &:before{
-            position: absolute;
-            top: -45px;
-            left: -17px;
-            width: 160px;
-            height: 160px;
-            border: solid 1px #fff;
-            content: "";
-            background:transparent;
-            z-index: -1;
-            transform:perspective(800px) scale(0.4) rotate(0deg);
-            @include anime(1.5s, (cubic-bezier(.55,0,.1,1)));
-        }
-        &:hover::after{
-          transform:perspective(800px) scale(1.0) rotate(600deg);
-          
-        }
-        &:hover::before{
-            transform:perspective(800px) scale(1.0) rotate(-100deg);
-        }
-        &:hover{
-            color: #111;
+            position:absolute;
+            @include center();
+            background: transparent;
+            @include anime(0.6s, (cubic-bezier(.55,0,.1,1)));
+            cursor: pointer;
+            box-shadow: 0px 0px 0px #fff;
+            z-index: 0;
             span{
               color: $pale-white;
               font-family:"Anton";
               font-size: 22px;
-              color:#111;
-              top: 30px;
-              left: 45px;
+              color:#ffc300;
+              transition: 0.6s;
+              position: absolute;
+              top: 15px;
+              left: 5px;
             }
+            .ring{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                @include round(50px);
+                top: 40%;
+                left: 45%;
+                @include anime(1.5s,(cubic-bezier(.55,0,.1,1)));
+                transform:perspective(500px)  translate3d(0px, 0px,0px);
+                opacity: 0.0;
+            }
+            
+            &:hover .one{
+                transform:perspective(500px)  translate3d(-90px, -50px,150px);
+                opacity: 1;
+            }
+              &:hover .two{
+                transform:perspective(800px)  translate3d(-130px, 50px,180px);
+                opacity: 0.6;
+            }
+              &:hover .three{
+                transform:perspective(800px)  translate3d(130px, 50px,30px);
+                opacity: 0.2;
+            }
+            &:hover .four{
+                transform:perspective(800px)  translate3d(130px, -120px,80px);
+                opacity: 0.9;
+            }
+            &::after{
+              position: absolute;
+                top: -35px;
+                left:0;
+              width: 150px;
+              height: 150px;
+                content: "";
+                background: #fff;
+                z-index: -1;
+                transform:perspective(800px) scale(0.0) rotate(0deg);
+                @include anime(1.5s,(cubic-bezier(.55,0,.1,1)));
+            }
+            &:before{
+                position: absolute;
+                top: -45px;
+                left: -17px;
+                width: 160px;
+                height: 160px;
+                border: solid 1px #fff;
+                content: "";
+                background:transparent;
+                z-index: -1;
+                transform:perspective(800px) scale(0.4) rotate(0deg);
+                @include anime(1.5s, (cubic-bezier(.55,0,.1,1)));
+            }
+            &:hover::after{
+              transform:perspective(800px) scale(1.0) rotate(600deg);
+              
+            }
+            &:hover::before{
+                transform:perspective(800px) scale(1.0) rotate(-100deg);
+            }
+            &:hover{
+                color: #111;
+                span{
+                  color: $pale-white;
+                  font-family:"Anton";
+                  font-size: 22px;
+                  color:#111;
+                  top: 30px;
+                  left: 45px;
+                }
+            }
+            
         }
-        
+  }
+// 비주얼 끝
+
+
+
+
+.tape_img{
+  position: absolute;
+
+
+  &.left{
+    left:-50px;
+    bottom:0;
+    transform: rotate(35deg);
+  }
+  &.right{
+    right:-50px;
+    top:0;
+    transform: rotate(35deg);
+  }
+}
+
+
+
+
+///메인 색션시작//어바웃 색션1
+
+.console-text {
+  font-size: 4em;
+}
+.lamp{
+  position: absolute;
+  left: 5%;
+  top:-5%;
+  z-index: 1;
+}
+
+.MainSection1{
+  // background: url('../public/img/bg01B.webp') no-repeat bottom #ffc300;
+  position: relative;
+  background:#ffc300;
+  background-size: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .MainSection1BG{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .aboutTitle{
+    position: absolute;
+    top: 33%;
+    left: 67%;
+    transform: translate(-50%,-50%);
+  }
+  .txt{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    font-family: "KBO-Dia-Gothic_bold";
+    position: relative;
+    z-index: 10;
+    text-align: right;
+    width: 72%;
+    float: right;
+
+    span{
+      cursor: pointer;
+      font-family: "KBO-Dia-Gothic_bold";
+      font-size: 18px;
+      position: relative;
+      vertical-align: baseline;
+      &::before{
+        content: '';
+        display: block;
+        position:absolute;
+        bottom:-2px;
+        left: 0;
+        background: #8800ff;
+        width: 100%;
+        height: 5px;
+        z-index:1;
+      }
+    }
+  }
+  .txtRotate{
+    transform: rotate(28deg);
+    position: absolute;
+    bottom: -20%;
+    left: -8%;
+    width: 80%;
+    font-size: 150px;
+    color: #fff;
+    font-family:"Anton";
+    z-index: 1;
+    transition: 0.5s;
+    &:nth-child(1){
+      bottom: 40%;
+      left: -5%;
+      z-index: 1;
+      transform: rotate(28deg) translateX(10%);
+    }
+    &:nth-child(2){
+      bottom: 25%;
+      left: -8%;
+      z-index: 1;
+      transform: rotate(28deg) translateX(3%);
+    }
+    &:nth-child(3){
+      bottom: 1%;
+      left: -2.5%;
+      z-index: 1;
+      transform: rotate(28deg) translateX(0%);
+    }
+    &:nth-child(4){
+      bottom: -13.5%;
+      left: -7%;
+      z-index: 1;
+      transform: rotate(28deg) translateX(0%);
+    }
+
+  }
+  .tape_img{
+    &.left{
+      left: -80px;
+      top: -20px;
+      bottom: auto;
+    }
+    &.right{
+      right: -60px;
+      top: auto;
+      bottom: 100px;
+    }
+  }
+  .glitch {
+    color: #111;
+    position: relative;
+    font-size: 430px;
+    letter-spacing: -10px;
+    font-family: 'Anton';
+    animation: glitch 3s 2s infinite, shake 2s infinite;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    background: #ffc300;
+    overflow: hidden;
+    top: 0;
+  }
+  
+  .glitch::before {
+    text-shadow: -5px 0 magenta;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 1.5s 2.1s infinite;
+  }
+  
+  .glitch::after {
+    text-shadow: -5px 0 lightgreen;
+    animation: noise-2 2.5s linear infinite alternate-reverse, glitch 1.5s 2s infinite;
+  }
+}
+
+
+
+
+
+ 
+.aboutBtn{
+  position: absolute;
+  left: 1%;
+  top: 24%;
+  z-index: 0;
+  width: 500px;
+  height: 500px;
+}
+    .button_w {
+  
+      p {
+        margin: 30px auto;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: #e47d68;
+        padding: 10px;
+        border-top: 2px solid #527c8c;
+        border-bottom: 2px solid #527c8c;
+        width: 281px;
+        -webkit-text-shadow: 1px 1px 1px #000000;
+        -moz-text-shadow: 1px 1px 1px #000000;
+        -o-text-shadow: 1px 1px 1px #000000;
+        text-shadow: 1px 1px 1px #000000;
+      }
+    }
+  
+    h2 {
+      position: absolute;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      transform: none;
+      z-index: 100000;
+      text-transform: uppercase;
+      font-weight: bold;
+      /* visibility: visible; */
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+      -o-opacity: 0;
+      opacity: 0;
+      color: RED;
+      -webkit-text-shadow: 1px 1px 1px #333333;
+      -moz-text-shadow: 1px 1px 1px #333333;
+      -o-text-shadow: 1px 1px 1px #333333;
+      text-shadow: 1px 1px 1px #333333;
+      font-size: 40px;
+    }
+  
+    .all {
+      background-color: none;
+      position: relative;
+      width:500px;
+      height: 500px;
+      border-radius: 0%;
+      overflow: visible;
+  
+      .one {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: #ffc300;
+        border-radius: 0%;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        z-index: 4;
+
+      }
+  
+      .two {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: #ff0083;
+        border-radius: 0%;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        z-index: 3;
+      }
+  
+      .three {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: #666;
+        border-radius: 0%;
+        -webkit-transition: 1.5s;
+        -moz-transition: 1.5s;
+        -o-transition: 1.5s;
+        transition: 1.5s;
+        z-index: 2;
+      }
+  
+      .four {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: #8800ff;
+        border-radius: 0%;
+        -webkit-transition: 2s;
+        -moz-transition: 2s;
+        -o-transition: 2s;
+        transition: 2s;
+        z-index: 1;
+      }
+  
+      .circle {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: none;
+        border-radius: 0%;
+        -webkit-transition: .5s ;
+        -moz-transition: .5s ;
+        -o-transition: .5s ;
+        transition: .5s ;
+        z-index: 5;
+      }
+    }
+  
+    .all.on {
+      .one {
+        -webkit-transform: rotate(-45deg) scale(.8);
+        -moz-transform: rotate(-45deg) scale(.8);
+        -o-transform: rotate(-45deg) scale(.8);
+        transform: rotate(-45deg) scale(.8);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+      }
+  
+      .two {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+  
+      .three {
+        -webkit-transform: rotate(-225deg) scale(1.3);
+        -moz-transform: rotate(-225deg) scale(1.3);
+        -o-transform: rotate(-225deg) scale(1.3);
+        transform: rotate(-225deg) scale(1.3);
+
+      }
+  
+      .four {
+        -webkit-transform: rotate(450deg) scale(1.5);
+        -moz-transform: rotate(450deg) scale(1.5);
+        -o-transform: rotate(450deg) scale(1.5);
+        transform: rotate(450deg) scale(1.5);
+      }
+  
+      .circle {
+        background-color: #111;
+        border-radius: 0%;
+        -webkit-transform: rotate(-45deg) scale(.7);
+        -moz-transform: rotate(-45deg) scale(.7);
+        -o-transform: rotate(-45deg) scale(.7);
+        transform: rotate(-45deg) scale(.7);
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+      }
+    }
+  
+
+
+
+
+
+///메인 색션시작 끝
+
+
+////색션2
+///////////////////////////////////////////////////////////////MainSection2 색션2////////////
+.MainSection2{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #212121;
+  .center{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+
+
+  }//center: END
+  .tape_img.three{
+    &.left{
+      bottom: auto;
+      top: -20px;
+      transform: rotate(135deg);
+    }
+    &.right{
+      top: -40px;
+      right: -115px;
+      opacity: 0.5;
     }
   }
 
+  .projectList{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 88%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    li{
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+      transition: 0.5s;
+      position: relative;
+      &:hover{
+        .superMen{
+          transform: translate(-50%,-150%);
+          opacity: 0;
+          animation: moveUpDown2 0.3s ease-in ;
+        }  
+        @keyframes moveUpDown2 {
+          0% {
+            transform: translate(-50%,-60%);
+          }
+          50% {
+            transform: translate(-50%,-80%);
+          }
+          100% {
+            transform: translate(-50%,-150%);
+          }
+        }
+      }
+      .superMen{
+        width: 200px;
+        position: absolute;
+        left: 50%;top:50%;
+        z-index: 2;
+        transform: translate(-50%,-60%);
+        animation: moveUpDown 10s ease-in-out infinite;
+      }
+      @keyframes moveUpDown {
+        0% {
+          transform: translate(-50%,-60%);
+        }
+        50% {
+          transform: translate(-50%,-45%);
+        }
+        100% {
+          transform: translate(-50%,-60%);
+        }
+      }
+      h3{
+        font-size: 80px;
+        color: #fff;
+        font-family: "Anton";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 104%;
+        transform: translate(-50%, 80%);
+        transition: 0.6s;
+        b{
+          font-family: "Anton";
+          transition: 0.3s ease-in 0.6s;
+          vertical-align: baseline;
+        }
+        span{
+          display: block;
+          font-family: "Anton";
+          margin-top: 5px;
+        }
+      }
+      .bvbLogo{
+        position: absolute;
+        width: 200px;
+        top: 19%;
+        left: -100%;
+        transition: 0.3s ease-in 0.3s;
+        transform: scale(1.61);
+        &.bvbLogoLeft{}
+        &.bvbLogoRight{
+          left: auto;
+          right: -100%;
+        }
+      }//bvbLogo : END
+      @keyframes logoEff {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 0;
+        }
+      }
+      &:hover{
+        .cucle{
+          background:url('../public/img/signulOn.png') #051b57 center no-repeat;
+          background-size: 100%;
+          transform: scale(1.15);
+          transition: 0.5s;
+        }//cucle : END
+        .bvbLogo{
+          left: -61px;
+          &.bvbLogoRight{
+            left: auto;
+            right:-61px;
+          }
+        }
+    }
+      .cucle{
+        
+        width: 430px;
+        height: 430px;
+        margin: 0 auto;
+        border-radius: 100%;
+        overflow: hidden;
+        position: relative;
+        border:15px solid #ff0000;
+        background:url('../public/img/signulBlack.png') #141414 center no-repeat;
+        background-size: 100%;
+        transition: 0.5s;
+
+      }//cucle : END
+      .cloud{
+        width: 550px;
+        position: absolute;
+        top:-20%;
+        right:-15%;
+        transform: translateX(-4%);
+        animation: cloudAnimation 20s ease-in-out infinite;
+        &.con2{
+          width: 400px;
+          top: auto;
+          bottom:15%;
+          left: 0;
+          transform: translateX(3%);
+          animation: cloudAnimation2 20s ease-in-out infinite;
+        }
+        @keyframes cloudAnimation {
+          0% {
+            transform: translateX(-4%);
+          }
+          50% {
+            transform: translateX(4%);
+          }
+          100% {
+            transform: translateX(-4%);
+          }
+        }
+        @keyframes cloudAnimation2 {
+          0% {
+            transform: translateX(3%);
+          }
+          50% {
+            transform: translateX(-3%);
+          }
+          100% {
+            transform: translateX(3%);
+          }
+        }
+      }//cloud : END
+      img{
+        width: 100%;
+      }
+
+      &:nth-child(2){
+        .cucle{
+          background:url('../public/img/bigbang.png') #141414 center no-repeat;
+          background-size: 100%;
+        }
+        .bvbLogo{
+          transition: 0.3s ease-in 0.6s;
+
+        }//bvbLogo : END
+        &:hover{
+          .cucle{
+            background:url('../public/img/bigbangOn.gif') #141414 center no-repeat;
+          }
+          h3{
+            b{color:#262729;}
+          }
+        }
+      }//두번째 li : END
+      &:nth-child(3){
+        .cucle{
+        }
+        .bvbLogo{
+          transition: 0.3s ease-in 0.1s;
+        }//bvbLogo : END
+        h3{
+          transition: 0.3s 0.4s;
+          b{
+            transition: 0.3s 0.4s;
+          }
+        }
+        &:hover{
+          .cucle{
+          }
+          h3{
+            b{color:#e60021;}
+          }
+        }
+      }//세번째 li : END
+    }//li : END
+  }
+
+
+  
+
+}//MainSection2 : END
 
 
 
@@ -863,3 +1397,54 @@ $pale-white: #f6f6f6;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////색션2//끝
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

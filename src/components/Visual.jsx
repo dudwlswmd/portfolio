@@ -17,8 +17,9 @@ const Visual = () => {
                <p className='boxLine'></p>
                <p className='boxLine two bg'></p>
                <p className='img_h'><img src="img/head4t.webp" alt="아그리파사진" /></p>
+               {/* <p className='img_h two'><img src="img/jjjjjj.png" alt="노트북사진" /></p> */}
 
-               <div className="section three">
+               <div className="section threee">
                     <div id="button">
                          <span>ABOUT</span>
                          <div className="ring one"></div>
