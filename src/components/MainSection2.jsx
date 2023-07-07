@@ -45,6 +45,12 @@ const MainSection2 = () => {
                               onMouseLeave={handleMouseLeave}
                          >
                               <div className='cucle'>
+                                   <p className='popmartCitys'>
+                                        <img src="/img/moon.webp" alt="달" />
+                                        <img src="/img/city2.webp" alt="도시밝은배경" />
+                                        <img src="/img/cityBg.webp" alt="도시어두운배경" />
+                                        <img src="/img/city.png" alt="도시불빛" />
+                                   </p>
                                    <img className='bvbLogo bvbLogoLeft' src="/img/poplogoLeft.png" alt="로고왼쪽" />
                                    <img className='bvbLogo bvbLogoRight' src="/img/poplogoRight.png" alt="로고오른쪽" />
                               </div>

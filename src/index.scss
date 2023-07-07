@@ -1154,8 +1154,8 @@ $pale-white: #f6f6f6;
 .MainSection2{
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: #212121;
+  height: 120vh;
+  background:url('../public/img/bg03.webp') #212121 no-repeat bottom;
   .center{
     position: absolute;
     top: 38%;
@@ -1362,7 +1362,41 @@ $pale-white: #f6f6f6;
       }//두번째 li : END
       &:nth-child(3){
         .cucle{
+          background:url('../public/img/bun.gif') #141414 top no-repeat;
         }
+        .popmartCitys{
+            img{
+              &:nth-child(1){
+                position: absolute;
+                top: 25%;
+                left: 10%;
+                width: 100px;
+              }
+              &:nth-child(2){
+                position: absolute;
+                bottom:8%;
+                left: 0;
+                width: 100%;
+                transform: scale(2);
+              }
+              &:nth-child(3){
+                position: absolute;
+                bottom:18%;
+                left: 0;
+                width: 100%;
+                z-index: 0;
+                transform: scale(2);
+              }
+              &:nth-child(4){
+                position: absolute;
+                bottom:10%;
+                left: 0;
+                width: 100%;
+                z-index: 0;
+                transform: scale(2);
+              }
+            }
+        }//popmartCitys : END
         .bvbLogo{
           transition: 0.3s ease-in 0.1s;
         }//bvbLogo : END
@@ -1391,38 +1425,23 @@ $pale-white: #f6f6f6;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ////색션2//끝
 
 
 
+////색션3//시작
+/// 
+
+.MainSection3{
+  height: 100vh;
+  background: #ffc300;
+}//MainSection3 : END
+
+
+
+
+
+////색션3//끝
 
 
 
