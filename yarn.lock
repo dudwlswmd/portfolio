@@ -12170,6 +12170,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swiper@npm:^10.0.3":
+  version: 10.0.3
+  resolution: "swiper@npm:10.0.3"
+  checksum: 895688762302bc403517074db9811b6c69ba91869c7f2871286f2ba63da50ce62042b5b45afb3dcad626a3ec84cdcec3f776de7977472ebffe4fec60cdffbef3
+  languageName: node
+  linkType: hard
+
 "symbol-tree@npm:^3.2.4":
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
@@ -12254,6 +12261,7 @@ __metadata:
     react-router-dom: ^6.14.0
     react-scripts: 5.0.1
     sass: ^1.62.1
+    swiper: ^10.0.3
     typewriter-effect: ^2.20.1
     web-vitals: ^2.1.0
   languageName: unknown

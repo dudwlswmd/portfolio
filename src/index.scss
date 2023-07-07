@@ -994,29 +994,30 @@ $pale-white: #f6f6f6;
         -o-text-shadow: 1px 1px 1px #000000;
         text-shadow: 1px 1px 1px #000000;
       }
+      h2 {
+        position: absolute;
+        line-height: 1;
+        margin: 0;
+        text-align: center;
+        transform: none;
+        z-index: 100000;
+        text-transform: uppercase;
+        font-weight: bold;
+        /* visibility: visible; */
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+        -o-opacity: 0;
+        opacity: 0;
+        color: RED;
+        -webkit-text-shadow: 1px 1px 1px #333333;
+        -moz-text-shadow: 1px 1px 1px #333333;
+        -o-text-shadow: 1px 1px 1px #333333;
+        text-shadow: 1px 1px 1px #333333;
+        font-size: 40px;
+      }
     }
   
-    h2 {
-      position: absolute;
-      line-height: 1;
-      margin: 0;
-      text-align: center;
-      transform: none;
-      z-index: 100000;
-      text-transform: uppercase;
-      font-weight: bold;
-      /* visibility: visible; */
-      -webkit-opacity: 0;
-      -moz-opacity: 0;
-      -o-opacity: 0;
-      opacity: 0;
-      color: RED;
-      -webkit-text-shadow: 1px 1px 1px #333333;
-      -moz-text-shadow: 1px 1px 1px #333333;
-      -o-text-shadow: 1px 1px 1px #333333;
-      text-shadow: 1px 1px 1px #333333;
-      font-size: 40px;
-    }
+
   
     .all {
       background-color: none;
@@ -1433,8 +1434,43 @@ $pale-white: #f6f6f6;
 /// 
 
 .MainSection3{
-  height: 100vh;
+  height: 150vh;
   background: #ffc300;
+  position: relative;
+  .center{
+    position: absolute;
+    top: 33%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+    .glitch::before, .glitch::after{
+      background: #ffc300;
+    }
+    .glitch {
+      color: #111;
+      animation: glitch 3s 2s infinite, shake 2s infinite,glitch-color 10s infinite;
+    }
+    @keyframes glitch-color {
+      0% {
+        color: #1861f5;
+      }
+      20% {
+        color: #1861f5;
+      }
+      50% {
+        color: #111;
+      }
+      75% {
+        color: #8800ff;
+      }
+      90% {
+        color: magenta;
+      }
+      100% {
+        color: #1861f5;
+      }
+    }
+  }//center: END
 }//MainSection3 : END
 
 
