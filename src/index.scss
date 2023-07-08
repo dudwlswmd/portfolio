@@ -1214,7 +1214,8 @@ $pale-white: #f6f6f6;
       .superMen{
         width: 200px;
         position: absolute;
-        left: 50%;top:50%;
+        left: 48%;
+        top:50%;
         z-index: 2;
         transform: translate(-50%,-60%);
         animation: moveUpDown 10s ease-in-out infinite;
