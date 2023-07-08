@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Header = () => {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
      const [showGlitchImg, setShowGlitchImg] = useState(false);
@@ -42,7 +43,7 @@ return (
                     <li data-text="contact"><Link to="/Contact" onClick={handleMenuClick}>contact</Link></li>
                </ul>
           </div>
-          {showGlitchImg && <img className='glitchImg' src="img/glitch.gif" alt="글리치이미지" />}
+          {showGlitchImg && <img className='glitchImg' src="img/glitch.gif" alt="글리치이미지" />}          
      </header>
      );
 };

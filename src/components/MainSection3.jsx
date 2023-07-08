@@ -1,6 +1,8 @@
 import React from 'react'
 import SwiperComponent from './SwiperComponent'
 import '../components/swiperHome.scss';
+import '../components/careerList.scss';
+import CareerList from './CareerList';
 
 const MainSection3 = () => {
      return (
@@ -14,6 +16,8 @@ const MainSection3 = () => {
                <div className='MainSection3_swiper'>
                     <SwiperComponent />
                </div>
+               <img className='MainSection1BG' src="/img/bg02B.webp" alt="붓배경" />
+               <CareerList />
           </div>
      )
 }

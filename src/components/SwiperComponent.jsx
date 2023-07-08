@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper as SwiperReact, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 // Import Swiper styles
@@ -13,8 +13,22 @@ import './swiperHome.scss';
 import { Navigation } from 'swiper/modules';
 
 const SwiperComponent  = () => {
+     const [isSwiperHovered, setIsSwiperHovered] = useState(false);
+
+     const handleSwiperMouseEnter = () => {
+       setIsSwiperHovered(true);
+     };
+   
+     const handleSwiperMouseLeave = () => {
+       setIsSwiperHovered(false);
+     };
      
      return (
+          <div
+          className={`swiper-container ${isSwiperHovered ? 'swiper-container-hovered' : ''}`}
+          onMouseEnter={handleSwiperMouseEnter}
+          onMouseLeave={handleSwiperMouseLeave}
+          >
           <SwiperReact
           slidesPerView={'auto'}
           centeredSlides={true}
@@ -77,8 +91,9 @@ const SwiperComponent  = () => {
                     </dl>
                </SwiperSlide>
                <SwiperSlide>
-
+                    <p className='imgs'>
                     <img src="/img/slide01.webp" alt='이미지' />
+                    </p>
                     <dl>
                          <dt>DESIGN</dt>
                          <dd>
@@ -88,11 +103,51 @@ const SwiperComponent  = () => {
                               저와 함께 일하면 이러한 장점을 경험하실 수 있습니다
                          </dd>
                     </dl>
+                    <div className="new_Bottom_Move_Text">
+                         <div className="text text2">
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                         </div>
+                    </div>
+
+                    <div className="new_Bottom_Move_Text move2">
+                         <div className="text text1">
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                         </div>
+                    </div>
+
+                    <div className="new_Bottom_Move_Text move3">
+                         <div className="text text1">
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                              <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
+                              <p> PRESENT A NEW VISION FOR THE WEB</p>
+                         </div>
+                    </div>
+                    
                </SwiperSlide>
 
 
           </SwiperReact>
+          </div>
      )
 }
 
-export default SwiperComponent 
+export default SwiperComponent

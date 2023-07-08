@@ -8,6 +8,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #212121;
 }
+
+
+
+body::-webkit-scrollbar {
+  width: 8px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #ff0000; /* 스크롤바의 색상 */
+  
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #111;  /*스크롤바 뒷 배경 색상*/
+}
+
+
+
 #root{overflow: hidden;}
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
@@ -844,7 +864,7 @@ $pale-white: #f6f6f6;
   overflow: hidden;
   .MainSection1BG{
     position: absolute;
-    bottom: 0;
+    bottom:-1px;
     width: 100%;
     z-index: 2;
   }
@@ -1159,7 +1179,7 @@ $pale-white: #f6f6f6;
   background:url('../public/img/bg03.webp') #212121 no-repeat bottom;
   .center{
     position: absolute;
-    top: 38%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 0;
@@ -1435,12 +1455,12 @@ $pale-white: #f6f6f6;
 /// 
 
 .MainSection3{
-  height: 150vh;
+  height: 120vh;
   background: #ffc300;
   position: relative;
   .center{
     position: absolute;
-    top: 33%;
+    top: 25%;
     left: 40%;
     transform: translate(-50%,-50%);
     z-index: 0;
@@ -1449,9 +1469,9 @@ $pale-white: #f6f6f6;
     }
     .glitch {
       color: #111;
-      animation: glitch 3s 2s infinite, shake 2s infinite,glitch-color 10s infinite;
+      animation: glitch 3s 2s infinite, shake 2s infinite,glitch-color3 10s infinite;
     }
-    @keyframes glitch-color {
+    @keyframes glitch-color3 {
       0% {
         color: #1861f5;
       }
@@ -1472,6 +1492,14 @@ $pale-white: #f6f6f6;
       }
     }
   }//center: END
+
+  .MainSection1BG{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
 }//MainSection3 : END
 
 
