@@ -1,10 +1,40 @@
-import React from 'react'
-import '../components/Footer.scss';
+import React, { useState, useEffect } from 'react';
 import '../components/Footer.scss';
 
 const Footer = () => {
+  const [showTopButton, setShowTopButton] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 1000) {
+      setShowTopButton(true);
+    } else {
+      setShowTopButton(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    const scrollStep = window.scrollY / 150;
+
+    const scrollAnimation = () => {
+      if (window.scrollY > 0) {
+        window.scrollBy(0, -scrollStep);
+        requestAnimationFrame(scrollAnimation);
+      }
+    };
+
+    scrollAnimation();
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
      return (
-          <div className='Footer'>
+        <div className='Footer'>
             <ul>
                 <li>
                     <dl>
@@ -33,7 +63,12 @@ const Footer = () => {
                     </dl>
                 </li>
             </ul>
-          </div>
+                {showTopButton && (
+                    <div className="topBtn" onClick={scrollToTop}>
+                    TOP
+                    </div>
+                )}
+        </div>
      )
 }
 

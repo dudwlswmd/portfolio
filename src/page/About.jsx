@@ -1,9 +1,13 @@
 import React from 'react'
+import AboutVisual from '../components/AboutVisual'
+import AboutSection1 from '../components/AboutSection1'
+
 
 const About = () => {
      return (
-          <div>
-               어바웃
+          <div className='About'>
+               <AboutVisual />
+               <AboutSection1 />
           </div>
      )
 }

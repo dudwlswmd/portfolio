@@ -72,7 +72,7 @@ const MainSection1 = () => {
 
 
      return (
-     <div className="MainSection1" ref={triggerRef}>
+     <div className="MainSection1 nextSection" ref={triggerRef}  id="nextSection">
           <p className="txtRotate one">A CONSTANTLY EVOLVING</p>
           <p className="txtRotate two">DEVELOPER TO</p>
           <p className="txtRotate three">PRESENT A NEW</p>
