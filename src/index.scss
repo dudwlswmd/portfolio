@@ -1458,6 +1458,7 @@ $pale-white: #f6f6f6;
   height: 120vh;
   background: #ffc300;
   position: relative;
+  overflow: hidden;
   .center{
     position: absolute;
     top: 25%;
@@ -1495,7 +1496,7 @@ $pale-white: #f6f6f6;
 
   .MainSection1BG{
     position: absolute;
-    bottom:0;
+    bottom:-1px;
     left: 0;
     width: 100%;
     z-index: 5;

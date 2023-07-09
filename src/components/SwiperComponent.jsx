@@ -95,7 +95,7 @@ const SwiperComponent  = () => {
                     <img src="/img/slide01.webp" alt='이미지' />
                     </p>
                     <dl>
-                         <dt>DESIGN</dt>
+                         <dt>IMAGINATION</dt>
                          <dd>
                               디자인과 퍼블리싱 경험을 바탕으로, 
                               저는 프로젝트를 진행할 때 높은 수준의 디자인 이해력을 활용하여 개발을 진행합니다. 
@@ -125,7 +125,6 @@ const SwiperComponent  = () => {
                               <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
                               <p> PRESENT A NEW VISION FOR THE WEB</p>
                               <p> A CONSTANTLY EVOLVING DEVELOPER TO</p>
-                              <p> PRESENT A NEW VISION FOR THE WEB</p>
                          </div>
                     </div>
 

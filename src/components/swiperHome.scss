@@ -19,11 +19,57 @@
       top:-10%;
       right: auto;
       left:400px;
+      width: 35px;
+      height: 50px;
+      background: #111;
+      transition: 0.1s;
+      border-bottom: 4px solid #ff0000;
+      border-left: 4px solid #ff0000;
+        &::after{
+          position: absolute;
+          bottom:3px;
+          left:3px;
+          width: 102%;
+          height: 101%;
+          background: #ffc300;
+          font-size: 0;
+          transition: 0.1s;
+        }
+        &:hover{
+          &::after{
+            bottom:5px;
+            left:5px;
+          }
+        }
     }
     .swiper-button-next {
       top:-10%;
       right: auto;
       left:480px;
+      width: 35px;
+      height: 50px;
+      background: #111;
+      transition: 0.1s;
+      border-top: 4px solid #ff0000;
+      border-right: 4px solid #ff0000;
+      &::after{
+        position: absolute;
+        top:3px;
+        right:3px;
+        width: 102%;
+        height: 101%;
+        background: #ffc300;
+        font-size: 0;
+        transition: 0.1s;
+      }
+
+      &:hover{
+        &::after{
+          top:5px;
+          right:5px;
+
+        }
+      }
     }
     
   }//MainSection3_swiper : END
@@ -497,7 +543,7 @@
         transform-origin: 50% center;
         display: flex;
         flex: 0 0 auto;
-        width: 200vh;
+        width: 208vh;
         white-space: nowrap;
         overflow: hidden;
         transition: 1s;
