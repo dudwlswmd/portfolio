@@ -67,6 +67,7 @@ const MainSection2 = () => {
                               <h3><b>POP </b> MART<span>WEB APP</span></h3>
                          </li>
                     </ul>
+               <img className='MainSection4Bg' src="/img/bg03.webp" alt="붓배경" />
           </div>
      )
 }
