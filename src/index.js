@@ -5,6 +5,8 @@ import './index.scss';
 import App from './App';
 import Home from './page/Home';
 import About from './page/About';
+import Work from './page/Work';
+import Contact from './page/Contact';
 import NotFound from './page/NotFound';
 
 const router = createBrowserRouter([
@@ -14,7 +16,9 @@ const router = createBrowserRouter([
     errorElement:<NotFound />,
     children:[
       { index:true, path:'/', element:<Home/> },
-      { path:'/About', element:<About/> }
+      { path:'/About', element:<About/> },
+      { path:'/Work', element:<Work/> },
+      { path:'/Contact', element:<Contact/> }
     ]
   }
 ])

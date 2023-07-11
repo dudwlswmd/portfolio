@@ -7,7 +7,7 @@ const TypewriterApi = () => {
           <>
                <Typewriter
                     options={{
-                    strings: ['Hello', 'World'],
+                    strings: ['안녕하세요!!', '송영진 입니다!'],
                     autoStart: true,
                     loop: true,
                     }}

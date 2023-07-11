@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../components/Footer.scss';
 
-const Footer = () => {
+const Footer = ({className}) => {
   const [showTopButton, setShowTopButton] = useState(false);
 
   const handleScroll = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   const scrollToTop = () => {
-    const scrollStep = window.scrollY / 150;
+    const scrollStep = window.scrollY / 30;
 
     const scrollAnimation = () => {
       if (window.scrollY > 0) {
@@ -33,8 +33,8 @@ const Footer = () => {
     };
   }, []);
 
-     return (
-        <div className='Footer'>
+    return (
+        <div className={`Footer ${className}`}>
             <ul>
                 <li>
                     <dl>
@@ -69,7 +69,7 @@ const Footer = () => {
                     </div>
                 )}
         </div>
-     )
+    )
 }
 
 export default Footer

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import TypewriterApi from './TypewriterApi';
+
 
 const MainSection1 = () => {
      const [isHovered, setIsHovered] = useState(false);
@@ -105,7 +105,6 @@ const MainSection1 = () => {
                </p>
           </div>
           <img className="MainSection1BG" src="/img/bg01B.webp" alt="붓배경" />
-          <TypewriterApi />
      </div>
      );
 };

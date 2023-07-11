@@ -26,7 +26,10 @@ const Header = () => {
           }
      }, [isMenuOpen]);
      
-
+     const handleLinkClick = () => {
+          window.scrollTo(0, 0); // 스크롤을 맨 위로 이동
+          handleMenuClick(); // 메뉴 닫기
+     };
 return (
      <header>
           <h1>
@@ -37,10 +40,10 @@ return (
           <div className={`menu ${isMenuOpen ? 'on' : ''}`}>
                <span onClick={handleMenuClick}></span>
                <ul className="gnb" data-text="TRHACKER">
-                    <li data-text="home"><Link to="/" onClick={handleMenuClick}>home</Link></li>
-                    <li data-text="about"><Link to="/About" onClick={handleMenuClick}>about</Link></li>
-                    <li data-text="work"><Link to="/Work" onClick={handleMenuClick}>work</Link></li>
-                    <li data-text="contact"><Link to="/Contact" onClick={handleMenuClick}>contact</Link></li>
+                    <li data-text="HOME"><Link to="/" onClick={handleLinkClick}>HOME</Link></li>
+                    <li data-text="ABOUT"><Link to="/About" onClick={handleLinkClick}>ABOUT</Link></li>
+                    <li data-text="WORK"><Link to="/Work" onClick={handleLinkClick}>WORK</Link></li>
+                    <li data-text="CONTACT"><Link to="/Contact" onClick={handleLinkClick}>CONTACT</Link></li>
                </ul>
           </div>
           {showGlitchImg && <img className='glitchImg' src="img/glitch.gif" alt="글리치이미지" />}          

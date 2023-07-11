@@ -16,11 +16,11 @@ const SwiperComponent  = () => {
      const [isSwiperHovered, setIsSwiperHovered] = useState(false);
 
      const handleSwiperMouseEnter = () => {
-       setIsSwiperHovered(true);
+          setIsSwiperHovered(true);
      };
-   
+
      const handleSwiperMouseLeave = () => {
-       setIsSwiperHovered(false);
+          setIsSwiperHovered(false);
      };
      
      return (

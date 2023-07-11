@@ -6,6 +6,22 @@
     height: 40vh;
     background: #ffc300;
     position: relative;
+    &.black{
+        background: #212121;
+        li{
+            color:#ffc300;
+        }
+        .topBtn{
+
+            color: #212121;
+
+            background: #ffc300;
+            &:hover{
+            line-height: 50px;
+    
+            }
+        }
+    }
     ul{
         display: flex;
         justify-content: center;
