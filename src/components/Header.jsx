@@ -37,8 +37,8 @@ return (
                <img src="/img/logo.png" alt="로고" />
           </Link>
           </h1>
-          <div className={`menu ${isMenuOpen ? 'on' : ''}`}>
-               <span onClick={handleMenuClick}></span>
+          <div className={`menu ${isMenuOpen ? 'on' : ''}`}  onClick={handleMenuClick}>
+               <span></span>
                <ul className="gnb" data-text="TRHACKER">
                     <li data-text="HOME"><Link to="/" onClick={handleLinkClick}>HOME</Link></li>
                     <li data-text="ABOUT"><Link to="/About" onClick={handleLinkClick}>ABOUT</Link></li>

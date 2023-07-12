@@ -14,7 +14,9 @@ const ContactVisual = () => {
                </div>
                <div className='subText'>
                     <p className="subtitle">ME & LET'S<br/>HAVE A TALK</p>
-                    <p className='tex'>"나만의 언어로 코딩하고,<br /> 나의 캔버스에 디자인을 그리며, <br />웹을 통해 만든 <span>나만의 세계에</span> 오신 걸 환영합니다"</p>
+                    <p className='tex'>"나만의 언어로 코딩하고,<br /> 
+                    나의 캔버스에 디자인을 그리며, <br />
+                    웹을 통해 만든 <span>나만의 세계에</span> 연락해주세요"</p>
                </div>
                <p className='boxLine'></p>
                <p className='boxLine two bg'></p>

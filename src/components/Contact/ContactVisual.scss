@@ -2,7 +2,6 @@
      position: relative;
      width: 100%;
      height: 100vh;
-
      .AboutBg{
           position: absolute;
           bottom:-1px;
@@ -32,6 +31,7 @@
           right: 5%;
           left: auto;
           top: 85%;
+          z-index: 11;
      }
      .img_h{
           top: 21%;
