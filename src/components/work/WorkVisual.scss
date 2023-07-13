@@ -1,0 +1,229 @@
+
+.WorkVisual{
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     background: #b429c9;
+
+     .title{
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 5;
+          width: 100%;
+          height: 100%;
+          span{
+               position: absolute;
+               left: 210px;
+               bottom: 0;
+               z-index: 0;
+               width: 400px;
+               img{width: 100%;}
+          }
+          p{
+               position:absolute;
+               left: 0;
+               bottom:10%;
+               font-size:110px;
+               color:#ffc300;
+               font-family: "ANTON";
+               transform: rotate(-90deg) translate(45%, 20%);
+          }
+     }//title : END
+     .subTitle{
+
+     }//subTitle : END
+     .sun{
+          position: absolute;
+          top:5%;
+          left: 50%;
+          transform: translateX(-50%);
+          margin: 0 auto;
+          width: 1500px;
+          &.on{
+               z-index: 4;
+          }
+          img{
+               width: 100%;
+          }
+     }//sun : END
+     .treeOneG{
+          transform: rotate(180deg);
+          position: absolute;
+          top: 7%;
+          left: -20%;
+          width: 200%;z-index: 4;
+          &.two{
+               top: -30%;
+               left: -80%;
+               z-index: 5;
+               width: 1000%;
+               .treeOne{
+                    animation: scroll 10s linear infinite 5s;
+                    img{
+                         width: 1200px;
+                    }
+               }
+
+
+          }
+          .treeOne{
+               width: 100%;
+               transform: scaleX(-1);
+               animation: scroll 10s linear infinite;
+               img{
+                    float: right;
+                    transform: rotate(180deg);
+               }
+          }
+     }
+
+     .shadow{
+          position: absolute;
+          top:67%;
+          left:0;
+          z-index: 2;
+          width: 100%;
+          height: 130px;
+          background:
+          linear-gradient(rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0.99) 20.67%, rgba(0, 0, 0, 0.98) 26.34%, rgba(1, 1, 1, 0.95) 32.01%, rgba(1, 1, 1, 0.91) 37.68%, rgba(2, 2, 2, 0.87) 43.35%, rgba(2, 2, 2, 0.81) 49.02%, rgba(3, 3, 3, 0.74) 54.69%, rgba(4, 4, 4, 0.67) 60.36%, rgba(5, 5, 5, 0.59) 66.03%, rgba(6, 6, 6, 0.5) 71.7%, rgba(7, 7, 7, 0.41) 77.37%, rgba(8, 8, 8, 0.31) 83.04%, rgba(9, 9, 9, 0.21) 88.71%, rgba(11, 11, 11, 0.1) 94.38%, rgba(12, 12, 12, 0) 100%);
+          &.two{
+               transform: rotate(180deg)translateY(100%);
+          }
+          &.top{
+               top:-10px;
+               opacity: 0.7;
+          }
+          &.bottom{
+               transform: rotate(180deg)translateY(100%);
+               top:auto;
+               bottom:-15%;
+               opacity: 0.7;
+          }
+     }
+     .SliderTreeG{
+          transform: scaleX(-1);
+          position: absolute;
+          top: 12%;
+          width: 100%;
+          left: 0;
+          z-index: 3;
+     }
+     .FloorTrans{
+          position: relative;
+          top:60%;
+          width: 100%;
+          height: 500px;
+          overflow: hidden;
+          transform: rotate(180deg);
+          .FloorGroup{
+               position: absolute;
+               top: -40%;
+               left: -30%;
+               width: 150%;
+               transform: rotate(3deg);
+          }
+     }
+
+     .SliderCity {
+          img{
+               width: 2000px;
+          }
+          position: absolute;
+          top:43%;
+          left:0;
+          z-index: 1;
+          display: flex;
+          animation: scroll 300s linear infinite;
+          @keyframes scroll {
+               0% {
+                    transform: translateX(0);
+               }
+               100% {
+                    transform: translateX(-100%);
+               }
+          }
+          @keyframes scroll2 {
+               0% {
+                    // transform: translateX(0%);
+                    transform:translate3d(0%, 0, 0);
+
+               }
+               100% {
+                    // transform: translateX(100%);
+                    transform:translate3d(-100%, 0, 0);
+               }
+          }
+          &.Bg{
+               top:37%;
+               animation: scroll 870s linear infinite;
+          }
+          &.SliderTree{
+               img{
+                    width:4000px;
+               }
+               top:13%;
+               animation: scroll 2000s linear infinite;
+          
+          }
+          &.floor{
+               animation: scroll2 3s linear infinite;
+               img {
+                    width:100%;
+               }
+          }
+
+     }//SliderCity : END
+
+     .car{
+          position: absolute;
+          top:55%;
+          right:0%;
+          z-index: 4;
+          width: 1000px;
+          .carImg{
+               width: 100%;
+          }
+               @keyframes rotateCar1 {
+                    0% {
+                         transform: rotate3d(0, 1, 0, 45deg) rotate(0deg);
+
+                    }
+                    100% {
+                         transform: rotate3d(0, 1, 0, 45deg) rotate(-360deg);
+                    }
+               }
+               @keyframes rotateCar {
+                    0% {
+                         transform: rotate3d(0, 1, 0, 30deg) rotate(0deg);
+                    }
+                    100% {
+                         transform: rotate3d(0, 1, 0, 30deg) rotate(-360deg);
+                         
+                    }
+               }
+               
+               .rightRim {
+                    position: absolute;
+                    bottom: 12%;
+                    right: 35%;
+                    width: 160px;
+                    animation: rotateCar 0.5s linear infinite;
+
+                    transform-origin:50% 50%;backface-visibility: visible;
+               }
+               .leftRim {
+                    position: absolute;
+                    bottom: 20%;
+                    left: 6%;
+                    width: 100px;
+                    transform:rotate3d(0, 1, 0, 30deg);
+                    animation: rotateCar1 0.5s linear infinite;
+                    transform-origin:50% 50%;
+                    backface-visibility: visible;
+               }
+          
+     }
+
+
+}
