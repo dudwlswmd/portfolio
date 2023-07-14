@@ -40,10 +40,10 @@ return (
           <div className={`menu ${isMenuOpen ? 'on' : ''}`}  onClick={handleMenuClick}>
                <span></span>
                <ul className="gnb" data-text="TRHACKER">
-                    <li data-text="HOME"><Link to="/" onClick={handleLinkClick}>HOME</Link></li>
-                    <li data-text="ABOUT"><Link to="/About" onClick={handleLinkClick}>ABOUT</Link></li>
-                    <li data-text="WORK"><Link to="/Work" onClick={handleLinkClick}>WORK</Link></li>
-                    <li data-text="CONTACT"><Link to="/Contact" onClick={handleLinkClick}>CONTACT</Link></li>
+               <Link to="/" onClick={handleLinkClick}><li data-text="HOME"><p>HOME</p></li></Link>
+               <Link to="/About" onClick={handleLinkClick}><li data-text="ABOUT"><p>ABOUT</p></li></Link>
+               <Link to="/Work" onClick={handleLinkClick}><li data-text="WORK"><p>WORK</p></li></Link>
+               <Link to="/Contact" onClick={handleLinkClick}><li data-text="CONTACT"><p>CONTACT</p></li></Link>
                </ul>
           </div>
           {showGlitchImg && <img className='glitchImg' src="img/glitch.gif" alt="글리치이미지" />}          

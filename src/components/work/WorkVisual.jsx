@@ -14,8 +14,14 @@ const WorkVisual = () => {
                </div>
                <div className='subTitle'>
                     <dl>
-                         <dt>Project Work</dt>
-                         <dd></dd>
+                         <dt>Time-Transcending Developer</dt>
+                         <dd>
+                              <span>시간을 초월한 개발자</span>
+                              시간과 기술의 경계를 넘어선 개발자로서,<br /> 
+                              내일의 기술과 미래의 세상을 형성하는 일에 열정을 가지고 있습니다. <br />
+                              함께 일하고 협력하며, <br />
+                              혁신적인 프로젝트를 통해 나의 세상을 펼치고 싶습니다.
+                         </dd>
                     </dl>
                </div>
                <div className='treeOneG'><p className='treeOne'><img src="/img/retro/palms.webp" alt="야자수하나" /></p></div>
@@ -32,13 +38,19 @@ const WorkVisual = () => {
                <p className='shadow two'></p>
                <p className='shadow top'></p>
                <p className='shadow bottom'></p>
-               <div className="SliderCity">
-                    <img src="/img/retro/cityRight.webp" alt="도시이미지" />
-                    <img src="/img/retro/cityRight.webp" alt="도시이미지" />
-                    <img src="/img/retro/cityRight.webp" alt="도시이미지" />
-                    <img src="/img/retro/cityRight.webp" alt="도시이미지" />
-                    <img src="/img/retro/cityRight.webp" alt="도시이미지" />
-                    <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+               <div className='SliderCityG'>
+                    <div className="SliderCity">
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                         <img src="/img/retro/cityRight.webp" alt="도시이미지" />
+                    </div>
                </div>
                <div className='SliderTreeG'>
                     <div className="SliderCity SliderTree">

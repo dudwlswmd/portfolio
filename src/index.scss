@@ -236,6 +236,10 @@ header{
               text-align: center;
               text-transform: uppercase;
               transform: skew(0deg) translateX(0);
+              p{
+                font-family:"ANTON";
+                color: #111;
+              }
                 a{
                   color: #111;
                   font-family: "Anton";
@@ -248,7 +252,7 @@ header{
                 &::before {
                   display: block;
                   padding: 0 20px;
-                  top:05px;
+                  top:0px;
                   left: 50%;
                   height: 50%;
                   transform: translateX(-50%);
@@ -270,7 +274,7 @@ header{
                   content: "";
                   position: absolute;
                   left: 50%;
-                  top: 55%;
+                  top: 45%;
                   transform: translateY(-50%, -50%);
                   height: 5px;
                   background: #ff0083;
