@@ -70,9 +70,34 @@ const CareerList = () => {
                 <p><a href='http://movie.choirock.com/'target="_blank" rel="noopener noreferrer">초이락 무비<span className='on'>07</span><strong>2019.08 ~ 2019.09  </strong></a></p>
             </li>
             <li className={`content3 ${activeTab === 'content3' ? 'on' : ''}`}>
-            <p>
-                <a href='www.s.com'>
-                  리스트1 <span>01</span>
+              <p>
+                <a href='http://dudwlswmd.dothome.co.kr/05/'target="_blank" rel="noopener noreferrer">
+                  교보문고<span>퍼블리싱</span>
+                </a>
+              </p>
+              <p>
+                <a href='http://dudwlswmd.dothome.co.kr/04/'target="_blank" rel="noopener noreferrer">
+                  11번가<span>퍼블리싱</span>
+                </a>
+              </p>
+              <p>
+                <a href='https://astounding-faun-efb6bc.netlify.app/'target="_blank" rel="noopener noreferrer">
+                  토트넘 훗스퍼 샵<span>리액트</span>
+                </a>
+              </p>
+              <p>
+                <a href='https://sunny-piroshki-2ef89f.netlify.app/'target="_blank" rel="noopener noreferrer">
+                  유튜브 API<span>리액트</span>
+                </a>
+              </p>
+              <p>
+                <a href='https://dudwlswmd.github.io/Rock/'target="_blank" rel="noopener noreferrer">
+                  가위바위보<span>리액트</span>
+                </a>
+              </p>
+              <p>
+                <a href='https://fanciful-smakager-13a123.netlify.app/'target="_blank" rel="noopener noreferrer">
+                  ToDo List<span>뷰</span>
                 </a>
               </p>
             </li>
