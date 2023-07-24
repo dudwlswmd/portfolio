@@ -121,6 +121,14 @@
                             position: absolute;
                             left: 5%;
                             bottom: 10px;
+                            &.txt{
+                                bottom: 0;
+                                a{
+                                    font-size: 30px;
+                                    color: #0019f4;
+                                    opacity: 0.8;
+                                }
+                            }
                         }
                         a{
                             font-family:"KBO-Dia-Gothic_bold";

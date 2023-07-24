@@ -71,6 +71,14 @@ const CareerList = () => {
             </li>
             <li className={`content3 ${activeTab === 'content3' ? 'on' : ''}`}>
               <p>
+                <a href='https://dudwlswmd.github.io/foodiebox/'target="_blank" rel="noopener noreferrer">
+                  푸디박스<span>팀작업</span>
+                  <strong className='txt'>
+                    <a href='https://www.notion.so/b5a24632855a432f832ed5ef4ac621d5?v=9a046f91ae634b45bb4925a1ed68a897&pvs=4'target="_blank" rel="noopener noreferrer"># 자료조사</a>
+                  </strong>
+                </a>
+              </p>
+              <p>
                 <a href='http://dudwlswmd.dothome.co.kr/05/'target="_blank" rel="noopener noreferrer">
                   교보문고<span>퍼블리싱</span>
                 </a>
